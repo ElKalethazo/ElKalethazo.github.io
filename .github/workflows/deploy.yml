@@ -1,0 +1,37 @@
+name: Compilar PHP y desplegar en Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Compilar páginas PHP a HTML
+        run: |
+          for file in index.php fnaf_characters.php my_genshin_characters.php my_pvz_characters.php my_skullgirls_mobile.php sanrio_characters.php tarjetero.php; do
+            if [ -f "$file" ]; then
+              html_file="${file%.php}.html"
+              php "$file" | sed -E 's/([a-zA-Z0-9_\/-]+)\.php/\1.html/g' > "$html_file"
+            fi
+          done
+          rm -f *.php
+
+      - name: Publicar en GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

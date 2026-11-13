@@ -1,0 +1,42 @@
+[
+  {
+    "id": "mangle",
+    "imagen": "images/fnaf/mangle.jpg",
+    "nombre": "The Mangle",
+    "datos": {
+      "-":"Ellos trataron de rehacer a Foxy, ¿sabes? Uh, ellos pensaron que el primero daba demasiado miedo, así que lo rediseñadoron para ser más amigable con los niños y lo pusieron en la Ensenada de los Niños. Para mantener a los niños entretenidos, ya sabes... Pero los niños en estos días simplemente no pueden mantener sus manos para sí mismos."
+    }
+  },
+  {
+    "id": "golden",
+    "imagen": "images/fnaf/goldenfreddy.jpg",
+    "nombre": "Golden Freddy/El -It´s Me-",
+    "datos": {
+      "-":"Alguien usó uno de los trajes...Tenemos un repuesto atrás, uno amarillo, alguien lo usó... Ahora ninguno de ellos está actuando bien..."
+    }
+  },
+  {
+    "id": "cupcake",
+    "imagen": "images/fnaf/cupcake.jpg",
+    "nombre": "El bendito cupcake",
+    "datos": {
+      "-":"Algunos lo llaman Cupcake, pero nosotros preferimos al más respetuoso Sr. Cupcake. En su forma estándar, es un cupcake con glaseado rosa, una sola vela, dientes salientes y ojos."
+    }
+  },
+  {
+    "id": "lefty",
+    "imagen": "images/fnaf/lefty.jpg",
+    "nombre": "Lefty",
+    "datos": {
+      "-":"En el final de Insanity, los planos de Lefty revelaron que fue creado para atrapar a The Puppet. Esto está respaldado por el nombre completo de Lefty (Lure, Encapsulate, Fuse, Transport, and Extract) y ciertas especificaciones, en particular la salida sensorial falsa para una pulsera de seguridad y la varita de ensueño para tocar la canción de cuna. Los planos se atribuyen a Fazbear Entertainment, Inc."
+    }
+  },
+  {
+    "id": "puppet",
+    "imagen": "images/fnaf/puppet.jpg",
+    "nombre": "Puppet (Yo le digo así y que?)",
+    "datos": {
+      "-":"Los demás son como animales, pero yo estoy muy consciente."
+    }
+  }
+]

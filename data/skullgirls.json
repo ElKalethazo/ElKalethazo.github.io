@@ -1,0 +1,42 @@
+[
+  {
+    "id": "damadehonor",
+    "imagen": "images/skullgirls/damadehonor.jpg",
+    "nombre": "Dama de Honor",
+    "datos": {
+      "-":"Es una referencia a Noelle de Genshin Impact, buen soporte de luz, es una variante de Marie y amo a Marie."
+    }
+  },
+  {
+    "id": "guardian",
+    "imagen": "images/skullgirls/guardian.jpg",
+    "nombre": "Guardian del Cometa",
+    "datos": {
+      "-":"Referencia a Rosalina, siempre la he querido pero no me sale D:, ya mencioné que amo a Marie?"
+    }
+  },
+  {
+    "id": "ilusionista",
+    "imagen": "images/skullgirls/ilusionista.jpg",
+    "nombre": "Ilusionista",
+    "datos": {
+      "-":"Variante sin elemento de Umbrella, se me hace linda su paleta de colores."
+    }
+  },
+  {
+    "id": "jovenpsiquica",
+    "imagen": "images/skullgirls/jovenpsiquica.jpg",
+    "nombre": "Jóven Psíquica",
+    "datos": {
+      "-":"Variante de Umbrella de luz. AMO a esta variante, la tengo en diamante y carrea a toda mi cuenta."
+    }
+  },
+  {
+    "id": "reimagenada",
+    "imagen": "images/skullgirls/reimagenada.jpg",
+    "nombre": "Reimagenada",
+    "datos": {
+      "-":"Alta referencia a Rei de Evangelion, no hay otra razón."
+    }
+  }
+]

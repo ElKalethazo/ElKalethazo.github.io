@@ -1,0 +1,42 @@
+[
+  {
+    "id": "fruestrella",
+    "imagen": "images/pvz/fruestrella.jpg",
+    "nombre": "Fruestrella",
+    "datos": {
+      "-":"Se ve bonita con su diente salido :,D"
+    }
+  },
+  {
+    "id": "lanzamaiz",
+    "imagen": "images/pvz/lanzamaiz.jpg",
+    "nombre": "Lanza maíz",
+    "datos": {
+      "-":"Tira mantequillas cada 8 horas pero se le perdona."
+    }
+  },
+  {
+    "id": "rabodegato",
+    "imagen": "images/pvz/rabodegato.jpg",
+    "nombre": "Rabo de gato",
+    "datos": {
+      "-":"UIIAI."
+    }
+  },
+  {
+    "id": "setachica",
+    "imagen": "images/pvz/setachica.jpg",
+    "nombre": "La seta chiquita (no recuerdo el nombre)",
+    "datos": {
+      "-":"Me carreaba la partida al inicio."
+    }
+  },
+  {
+    "id": "setamiedica",
+    "imagen": "images/pvz/setamiedica.jpg",
+    "nombre": "Seta miedica",
+    "datos": {
+      "-":"Bien miedosita, siempre creí que era la mamá de la seta chiquita."
+    }
+  }
+]

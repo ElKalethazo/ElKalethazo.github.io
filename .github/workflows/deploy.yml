@@ -19,9 +19,11 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
+          ini-values: short_open_tag=On, display_errors=On, error_reporting=E_ALL
 
       - name: Compilar páginas PHP a HTML
         run: |
+          set -eo pipefail
           for file in index.php fnaf_characters.php my_genshin_characters.php my_pvz_characters.php my_skullgirls_mobile.php sanrio_characters.php tarjetero.php; do
             if [ -f "$file" ]; then
               html_file="${file%.php}.html"
@@ -29,6 +31,7 @@ jobs:
             fi
           done
           rm -f *.php
+          touch .nojekyll
 
       - name: Publicar en GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "cinamorroll",
+    "imagen": "images/sanrio/cinnamoroll.jpg",
+    "nombre": "El Chile Morrón",
+    "datos": {
+      
+    }
+  },
+  {
+    "id": "kuromi",
+    "imagen": "images/sanrio/kuromi.jpg",
+    "nombre": "Kuromi",
+    "datos": {
+    }
+  },
+  {
+    "id": "mymelody",
+    "imagen": "images/sanrio/mymelody.jpg",
+    "nombre": "My melody",
+    "datos": {
+    
+    }
+  },
+  {
+    "id": "pochaco",
+    "imagen": "images/sanrio/pochacco.jpg",
+    "nombre": "Pochacco",
+    "datos": {
+    
+    }
+  },
+  {
+    "id": "pompurin",
+    "imagen": "images/sanrio/pompumpurin.jpg",
+    "nombre": "Pompumpurin",
+    "datos": {
+      
+    }
+  }
+]

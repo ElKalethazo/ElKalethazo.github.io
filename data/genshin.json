@@ -1,0 +1,57 @@
+[
+  {
+    "id": "kazuha",
+    "imagen": "images/genshin/kazuha.jpg",
+    "nombre": "Kazuha",
+    "datos": {
+      "Región":"Inazuma",
+      "Visión":"Anemo",
+      "Razón":"Atento, amable, sensible pero vagabundo.",
+      "Contras":"Muy bonito y todo pero de poemas no se come."
+    }
+  },
+  {
+    "id": "paeya",
+    "imagen": "images/genshin/paeya.jpg",
+    "nombre": "Kaeya",
+    "datos": {
+      "Región":"Mondstad",
+      "Visión":"Cryo",
+      "Razón":"Romántico de 10",
+      "Contras":"Medio borracho, te oculta cosas, coquetón con todo lo que se mueva, red flag andante."
+    }
+  },
+  {
+    "id": "diluc",
+    "imagen": "images/genshin/diluc.jpg",
+    "nombre": "Diluc",
+    "datos": {
+      "Región":"Mondstad",
+      "Visión":"Pyro",
+      "Razón":"Si no es con Kaeya, entonces con el hermano/Tiene plata/No bebe.",
+      "Contras":"Traumado a más no poder, tiene las expresiones de una piedra."
+    }
+  },
+  {
+    "id": "zhongli",
+    "imagen": "images/genshin/zhongli.jpg",
+    "nombre": "Zhongli",
+    "datos": {
+      "Región":"Liyue",
+      "Visión":"Geo",
+      "Razón":"Abuelito, ven a mi abuelito.",
+      "Contras":"No pensó en su jubilación/Está tan quebrado que deja que le pagues toda la cita."
+    }
+  },
+  {
+    "id": "Ayato",
+    "imagen": "images/genshin/ayato.jpg",
+    "nombre": "Kamisato Ayato",
+    "datos": {
+      "Región":"Inazuma",
+      "Visión":"Hydro",
+      "Razón":"Hombre de familia, responsable, con más inteligencia emocional que los otros 4 de arriba, guapo, poderoso, asombroso, muy hermoso, es precioso, armonioso, un buen socio, misterioso, buena gente, detergente, muy majete, inteligente, nada oj*te, irreverente, un exponente, muy perfecto, es lo que es.",
+      "Contras":"Medio clasista, pero se le perdona, un 10/10."
+    }
+  }
+]

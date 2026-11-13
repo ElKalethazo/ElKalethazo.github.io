@@ -1,0 +1,115 @@
+<div id="modal_card" class="modal_card" aria-hidden="true">
+    <div class="modal_card__backdrop" data-close-modal></div>
+    
+    <div class="modal_card__container" role="dialog" aria-modal="true">
+        <button class="modal_card__close" data-close-modal aria-label="Cerrar">&times;</button>
+        
+        <!-- Columna Izquierda: Fotografía -->
+        <div class="modal_card__media">
+            <img id="modalCardImg" src="" alt="">
+        </div>
+        
+        <!-- Columna Derecha: Nombre y datos desde JSON -->
+        <div class="modal_card__details">
+            <header class="modal_card__header">
+                <h3 id="modalCardName" class="modal_card__name"></h3>
+            </header>
+
+            <div class="modal_card__body">
+                <div id="modalCardData" class="modal_card__data"></div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal_card');
+    if (!modal) return;
+
+    const jsonCache = {}; // Guarda el JSON en memoria para no descargarlo dos veces
+
+    document.addEventListener('click', async (e) => {
+        // 1. Abrir modal al hacer clic en una tarjeta del carrusel
+        const card = e.target.closest('.ig-carousel__item');
+        if (card) {
+            const carousel = card.closest('.ig-carousel');
+            const jsonUrl = carousel.dataset.json;
+            const charId = card.dataset.id;
+
+            try {
+                if (!jsonCache[jsonUrl]) {
+                    const response = await fetch(jsonUrl);
+                    jsonCache[jsonUrl] = await response.json();
+                }
+
+                const personaje = jsonCache[jsonUrl].find(p => p.id === charId);
+                if (!personaje) return;
+
+                // Rellenar imagen y nombre
+                const imgEl = document.getElementById('modalCardImg');
+                imgEl.src = personaje.imagen;
+                imgEl.alt = personaje.nombre;
+                document.getElementById('modalCardName').textContent = personaje.nombre;
+
+                // Rellenar dinámicamente los datos del JSON
+                const dataContainer = document.getElementById('modalCardData');
+                dataContainer.innerHTML = '';
+
+                if (personaje.datos) {
+                    for (const [clave, valor] of Object.entries(personaje.datos)) {
+                        const row = document.createElement('div');
+                        row.className = 'modal_card__row';
+
+                        const label = document.createElement('strong');
+                        label.className = 'modal_card__label';
+                        label.textContent = clave + ': ';
+
+                        const text = document.createElement('span');
+                        text.className = 'modal_card__value';
+                        text.textContent = valor;
+
+                        row.appendChild(label);
+                        row.appendChild(text);
+                        dataContainer.appendChild(row);
+                    }
+                }
+
+                modal.classList.add('is-active');
+                document.body.style.overflow = 'hidden';
+            } catch (error) {
+                console.error('Error al cargar el JSON:', error);
+            }
+        }
+
+        // 2. Cerrar modal
+        if (e.target.hasAttribute('data-close-modal')) {
+            cerrarModal();
+        }
+
+        // 3. Controles de flechas del carrusel
+        const navBtn = e.target.closest('.ig-carousel__btn');
+        if (navBtn) {
+            const track = navBtn.closest('.ig-carousel').querySelector('.ig-carousel__track');
+            const scrollAmount = track.clientWidth * 0.75;
+            track.scrollBy({
+                left: navBtn.classList.contains('ig-carousel__btn--prev') ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+            cerrarModal();
+        }
+    });
+
+    function cerrarModal() {
+        modal.classList.remove('is-active');
+        document.body.style.overflow = '';
+    }
+});
+</script>

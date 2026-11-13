@@ -23,11 +23,17 @@ jobs:
 
       - name: Compilar páginas PHP a HTML
         run: |
-          set -eo pipefail
           for file in index.php fnaf_characters.php my_genshin_characters.php my_pvz_characters.php my_skullgirls_mobile.php sanrio_characters.php tarjetero.php; do
             if [ -f "$file" ]; then
               html_file="${file%.php}.html"
-              php "$file" | sed -E 's/([a-zA-Z0-9_\/-]+)\.php/\1.html/g' > "$html_file"
+              if output=$(php "$file" 2>&1); then
+                printf '%s\n' "$output" | sed -E 's/([a-zA-Z0-9_\/-]+)\.php/\1.html/g' > "$html_file"
+                echo "OK: $file -> $html_file"
+              else
+                echo "ERROR compilando $file:"
+                echo "$output"
+                printf '<pre>%s</pre>\n' "$output" > "$html_file"
+              fi
             fi
           done
           rm -f *.php
